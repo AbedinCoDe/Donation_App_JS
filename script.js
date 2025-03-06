@@ -2,7 +2,7 @@
 window.onscroll = function () {myFunction()};
 
 
-let header = document.getElementById('myHeader');
+let header = document.getElementById('myHeader', 'myHeader2');
 let sticky = header.offsetTop;
 
 
@@ -21,7 +21,7 @@ function myFunction(){
 document.getElementById('donation_Button').addEventListener('click', function () {
     const displayHeroContent = document.getElementById('hero_content');
     displayHeroContent.innerHTML = `
-        <div class="hero mt-5">
+        <div class="hero mt-30">
             <div class="hero-content flex-col lg:flex-row border border-[#e0e0e0] rounded-lg p-10">
                 <img src="assets/noakhali.png" class="max-w-sm rounded-lg shadow-2xl" />
                 <div>
@@ -117,6 +117,44 @@ document.getElementById('history_button').addEventListener('click', function () 
     document.getElementById('hero_content').style.display = 'none';
     document.getElementById('history_Content').style.display = 'block';
 })
+
+
+document.getElementById('blogSection').addEventListener('click', function (){
+    const displayBlog = document.getElementById('displayBlogSection');
+    displayBlog.innerHTML = `
+        <div class="flex join join-vertical bg-base-100 w-2/3 justify-center m-auto mt-50">
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" checked="checked" />
+                <div class="collapse-title font-semibold">How do I create an account?</div>
+                <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the
+                    registration process.</div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+                <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the
+                    instructions sent to your email.</div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title font-semibold">How do I update my profile information?</div>
+                <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make
+                    changes.</div>
+            </div>
+        </div>
+    `;
+
+    const blogButton = document.getElementById('blogSection');
+    blogButton.classList.add('hidden');
+    const getHomeButton = document.getElementById('homeButton');
+    getHomeButton.classList.remove('hidden');
+
+    const removeDonationPage = document.getElementById('myHeader2');
+    removeDonationPage.classList.add('hidden');
+
+
+})
+
 
 
 

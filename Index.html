@@ -26,7 +26,8 @@
 
         <div id="myHeader" class="navbar w-3/4 m-auto sticky">
             <div class="navbar-start">
-                <h2 class="bg-[#B4F461] pl-5 pr-5 pt-2 pb-2 rounded-lg">Blog</h2>
+                <a id="blogSection" class="bg-[#B4F461] pl-5 pr-5 pt-2 pb-2 rounded-lg cursor-pointer">Blog</a>
+                <a id="homeButton" href="" class="bg-[#B4F461] pl-5 pr-5 pt-2 pb-2 rounded-lg cursor-pointer hidden">Home</a>
             </div>
             <div class="navbar-center">
                 <a class="btn text-xl bg-transparent border-none">
@@ -46,7 +47,7 @@
     </div>
     <!-- Donation Button and History button here Start-->
 
-    <div class="max-w-full text-center mt-10">
+    <div id="myHeader2" class="max-w-full text-center mt-15 p-5 sticky">
         <button id="donation_Button" type="submit" class="btn">Donation</button>
         <button id="history_button" type="submit" class="btn">History</button>
     </div>
@@ -66,6 +67,18 @@
 
     <!-- Donation Button and History button here End -->
 
+
+
+    <!-- blog section here -->
+    <div id="displayBlogSection">
+        
+    </div>
+
+
+
+    <!-- blog section here -->
+
+
     <!-- modal Start here -->
 
     <dialog id="my_modal_2" class="modal">
@@ -80,6 +93,9 @@
         </div>
     </dialog>
     <!-- modal Start here -->
+
+
+
 
 
 
