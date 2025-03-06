@@ -1,3 +1,18 @@
 body, h1, h2, h3, h4, h5,h6, p{
     font-family: "Lexend", sans-serif;
 }
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image: blur;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.sticky + .content{
+    padding-top: 102px;
+    z-index: 1;
+}
